@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+const basePath = isProd ? '/SuccessDemo' : ''
+const assetPrefix = isProd ? '/SuccessDemo' : ''
+
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // אם האתר לא ב-root של GitHub Pages, בטל את ההערה והחלף בשם ה-repository שלך
-  // לדוגמה: אם ה-URL הוא username.github.io/repository-name, אז:
-  // basePath: '/repository-name',
-  // trailingSlash: true,
-  // assetPrefix: '/repository-name',
+  basePath: basePath,
+  trailingSlash: true,
+  assetPrefix: assetPrefix,
 };
 
 module.exports = nextConfig;
