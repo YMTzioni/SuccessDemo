@@ -4,14 +4,6 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
   },
   // אם האתר לא ב-root של GitHub Pages, הוסף basePath
   // basePath: '/success-college-site',

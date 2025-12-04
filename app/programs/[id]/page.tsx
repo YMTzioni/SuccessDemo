@@ -97,8 +97,15 @@ const programs = {
   }
 }
 
+export function generateStaticParams() {
+  return Object.keys(programs).map((id) => ({
+    id: id,
+  }))
+}
+
 export default function ProgramPage({ params }: { params: { id: string } }) {
-  const program = programs[params.id as keyof typeof programs]
+  const programId = params.id as unknown as keyof typeof programs
+  const program = programs[programId]
 
   if (!program) {
     notFound()

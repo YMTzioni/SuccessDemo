@@ -43,7 +43,16 @@ export default function AdminPage() {
     maxUses: ''
   })
 
-  const [campaignForm, setCampaignForm] = useState({
+  const [campaignForm, setCampaignForm] = useState<{
+    name: string
+    description: string
+    startDate: string
+    endDate: string
+    budget: string
+    status: string
+    targetAudience: string
+    channels: string[]
+  }>({
     name: '',
     description: '',
     startDate: '',

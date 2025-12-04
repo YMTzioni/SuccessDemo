@@ -138,8 +138,15 @@ const articles = {
   }
 }
 
+export function generateStaticParams() {
+  return Object.keys(articles).map((id) => ({
+    id: id,
+  }))
+}
+
 export default function ArticlePage({ params }: { params: { id: string } }) {
-  const article = articles[params.id as keyof typeof articles]
+  const articleId = params.id as unknown as keyof typeof articles
+  const article = articles[articleId]
 
   if (!article) {
     notFound()

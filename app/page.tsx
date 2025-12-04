@@ -113,7 +113,6 @@ export default function Home() {
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-16 h-16 rounded-full mr-4"
-                    unoptimized
                   />
                   <div>
                     <div className="font-bold text-gray-900 dark:text-white">{testimonial.name}</div>
