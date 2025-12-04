@@ -26,19 +26,19 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-16">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">על המכללה</h1>
-          <p className="text-xl text-blue-100 dark:text-gray-200 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">על המכללה</h1>
+          <p className="text-lg md:text-xl text-blue-100 dark:text-gray-200 max-w-3xl mx-auto px-4">
             המכללה הראשונה בישראל שמשלבת AI בכל תחום לימוד
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Story Section */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-4xl font-bold mb-8 text-center text-gray-900 dark:text-white">
+        <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-center text-gray-900 dark:text-white px-4">
             סיפור המכללה
           </h2>
           <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -96,28 +96,28 @@ export default function AboutPage() {
         </div>
 
         {/* Team Section */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+        <div className="mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-gray-900 dark:text-white px-4">
             הצוות שלנו
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-5 md:p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
               >
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4"
+                  className="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-3 md:mb-4"
                 />
-                <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                   {member.name}
                 </h3>
-                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2 md:mb-3 text-sm md:text-base">
                   {member.role}
                 </p>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
                   {member.description}
                 </p>
               </div>
@@ -126,21 +126,21 @@ export default function AboutPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">מוכנים להתחיל את המסע שלכם?</h3>
-          <p className="text-xl mb-8 text-blue-100 dark:text-gray-200">
+        <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12 text-white text-center mx-4 md:mx-0">
+          <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 px-4">מוכנים להתחיל את המסע שלכם?</h3>
+          <p className="text-lg md:text-xl mb-6 md:mb-8 text-blue-100 dark:text-gray-200 px-4">
             השאר פרטים וקבל ייעוץ אישי חינם מהמומחים שלנו
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <Link
               href="/contact"
-              className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
+              className="inline-block bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800 text-sm md:text-base"
             >
               השאר פרטים וקבל ייעוץ לימודים חינם
             </Link>
             <Link
               href="/programs"
-              className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors"
+              className="inline-block bg-transparent border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors text-sm md:text-base"
             >
               הצטרף למסלול שיכניס אותך להייטק
             </Link>

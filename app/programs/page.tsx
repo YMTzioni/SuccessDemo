@@ -92,18 +92,18 @@ export default function ProgramsPage() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-16">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">המסלולים שלנו</h1>
-          <p className="text-xl text-blue-100 dark:text-gray-200 max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">המסלולים שלנו</h1>
+          <p className="text-lg md:text-xl text-blue-100 dark:text-gray-200 max-w-3xl mx-auto px-4">
             בחרו את התחום שמעניין אתכם והתחילו ללמוד מקצוע אמיתי.
             כל המסלולים כוללים שיעורים בלייב, תמיכה אישית ושילוב בינה מלאכותית בלמידה.
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {programs.map((program) => (
             <div
               key={program.id}
@@ -120,20 +120,20 @@ export default function ProgramsPage() {
                   unoptimized
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <div className="p-5 md:p-6">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {program.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-3 md:mb-4">
                   {program.description}
                 </p>
-                <div className="mb-4">
-                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">משך הקורס: </span>
-                  <span className="text-sm text-gray-600 dark:text-gray-400">{program.duration}</span>
+                <div className="mb-3 md:mb-4">
+                  <span className="text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-300">משך הקורס: </span>
+                  <span className="text-xs md:text-sm text-gray-600 dark:text-gray-400">{program.duration}</span>
                 </div>
-                <div className="mb-6">
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">מה לומדים בפועל:</p>
-                  <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                <div className="mb-4 md:mb-6">
+                  <p className="text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">מה לומדים בפועל:</p>
+                  <ul className="list-disc list-inside text-xs md:text-sm text-gray-600 dark:text-gray-400 space-y-1">
                     {program.whatYouLearn.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}
@@ -141,7 +141,7 @@ export default function ProgramsPage() {
                 </div>
                 <Link
                   href={`/programs/${program.id}`}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors dark:bg-blue-500 dark:hover:bg-blue-600"
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-2.5 md:py-3 rounded-lg font-semibold text-center transition-colors dark:bg-blue-500 dark:hover:bg-blue-600 text-sm md:text-base"
                 >
                   {program.cta}
                 </Link>
@@ -150,14 +150,14 @@ export default function ProgramsPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">לא בטוח איזה מסלול מתאים לך?</h3>
-          <p className="text-xl mb-8 text-blue-100 dark:text-gray-200">
+        <div className="mt-12 md:mt-16 bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12 text-white text-center mx-4 md:mx-0">
+          <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 px-4">לא בטוח איזה מסלול מתאים לך?</h3>
+          <p className="text-lg md:text-xl mb-6 md:mb-8 text-blue-100 dark:text-gray-200 px-4">
             השאר פרטים וקבל ייעוץ אישי חינם מהמומחים שלנו
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
+            className="inline-block bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800 text-sm md:text-base"
           >
             לחץ כאן לשיחת ייעוץ עם נציג
           </Link>

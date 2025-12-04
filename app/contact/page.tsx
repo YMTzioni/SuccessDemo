@@ -29,20 +29,20 @@ export default function ContactPage() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-16">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">צור קשר</h1>
-          <p className="text-xl text-blue-100 dark:text-gray-200">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">צור קשר</h1>
+          <p className="text-lg md:text-xl text-blue-100 dark:text-gray-200 px-4">
             השאר פרטים וקבל ייעוץ אישי חינם מהמומחים שלנו
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-gray-900 dark:text-white">
               השאר פרטים ונחזור אליך
             </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors dark:bg-blue-500 dark:hover:bg-blue-600"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-colors dark:bg-blue-500 dark:hover:bg-blue-600 text-sm md:text-base"
               >
                 שלח פרטים וקבל ייעוץ חינם
               </button>
@@ -124,9 +124,9 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+          <div className="space-y-6 md:space-y-8">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-900 dark:text-white">
                 פרטי יצירת קשר
               </h3>
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -149,8 +149,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white">
                 שעות פעילות
               </h3>
               <div className="space-y-2 text-gray-700 dark:text-gray-300">
@@ -160,16 +160,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-8 text-white text-center">
-              <h3 className="text-2xl font-bold mb-4">תקשורת דרך WhatsApp</h3>
-              <p className="mb-6 text-blue-100 dark:text-gray-200">
+            <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-xl shadow-lg p-6 md:p-8 text-white text-center">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 px-4">תקשורת דרך WhatsApp</h3>
+              <p className="mb-4 md:mb-6 text-blue-100 dark:text-gray-200 text-sm md:text-base px-4">
                 אפשר גם ליצור קשר ישירות דרך WhatsApp Business שלנו
               </p>
               <a
                 href="https://wa.me/97231234567"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800"
+                className="inline-block bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-white dark:hover:bg-gray-800 text-sm md:text-base"
               >
                 פתח שיחה ב-WhatsApp
               </a>

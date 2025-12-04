@@ -23,32 +23,32 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-20 md:py-32 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-12 md:py-20 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="text-center md:text-right">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               העתיד שלך בהייטק
               <span className="block text-teal-300">מתחיל כאן</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-4 text-blue-100 dark:text-gray-200 font-semibold">
+            <p className="text-lg md:text-xl lg:text-2xl mb-3 md:mb-4 text-blue-100 dark:text-gray-200 font-semibold">
               לומדים חכם. מתקדמים רחוק.
             </p>
-            <p className="text-lg md:text-xl mb-8 text-blue-100 dark:text-gray-300">
+            <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-blue-100 dark:text-gray-300">
               המכללה הראשונה בישראל שמשלבת AI בכל תחום לימוד.
               שיעורים אונליין בלייב ובזמנך החופשי, מכל מקום.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
               <Link
                 href="/contact"
-                className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-lg"
+                className="bg-white text-blue-700 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 shadow-lg text-sm md:text-base"
               >
                 השאר פרטים וקבל ייעוץ אישי בחינם
               </Link>
               <Link
                 href="/programs"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors text-center"
+                className="bg-transparent border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors text-center text-sm md:text-base"
               >
                 הצטרף למסלול שיכניס אותך להייטק
               </Link>

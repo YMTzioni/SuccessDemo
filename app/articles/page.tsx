@@ -76,31 +76,31 @@ export default function ArticlesPage() {
 
   return (
     <Layout>
-      <div className="bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-gray-900 dark:to-indigo-900 text-white py-16">
+      <div className="bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-gray-900 dark:to-indigo-900 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">כתבות ומאמרים</h1>
-          <p className="text-xl text-indigo-100 dark:text-gray-200">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">כתבות ומאמרים</h1>
+          <p className="text-lg md:text-xl text-indigo-100 dark:text-gray-200 px-4">
             עדכונים, טיפים ומידע מקצועי מהמכללה
           </p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 mb-12 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">קבלו מדריך חינמי למקצועות ההייטק של 2026</h3>
-          <p className="text-lg mb-6 text-blue-100 dark:text-gray-200">
+        <div className="bg-gradient-to-r from-blue-600 to-teal-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 md:p-8 mb-8 md:mb-12 text-white text-center mx-4 md:mx-0">
+          <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 px-4">קבלו מדריך חינמי למקצועות ההייטק של 2026</h3>
+          <p className="text-base md:text-lg mb-4 md:mb-6 text-blue-100 dark:text-gray-200 px-4">
             הירשמו לניוזלטר שלנו וקבלו תוכן מקצועי, טיפים ומדריכים ישירות למייל
           </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <form className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-md mx-auto px-4">
             <input
               type="email"
               placeholder="הכנס כתובת אימייל"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
+              className="flex-1 px-4 py-2.5 md:py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white text-sm md:text-base"
             />
             <button
               type="submit"
-              className="bg-white text-blue-700 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-700 px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm md:text-base"
             >
               הירשם
             </button>
@@ -108,11 +108,11 @@ export default function ArticlesPage() {
         </div>
 
         {/* Categories Filter */}
-        <div className="flex flex-wrap gap-3 mb-12 justify-center">
+        <div className="flex flex-wrap gap-2 md:gap-3 mb-8 md:mb-12 justify-center px-4">
           {categories.map((category) => (
             <button
               key={category}
-              className="px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-colors font-semibold"
+              className="px-4 md:px-6 py-1.5 md:py-2 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-colors font-semibold text-sm md:text-base"
             >
               {category}
             </button>
@@ -120,7 +120,7 @@ export default function ArticlesPage() {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {articles.map((article) => (
             <Link
               key={article.id}
@@ -143,23 +143,23 @@ export default function ArticlesPage() {
                   </span>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <div className="p-5 md:p-6">
+                <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-2 md:mb-3">
                   <span>{article.date}</span>
                   <span>•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-3 md:mb-4 line-clamp-3">
                   {article.excerpt}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
                     {article.author}
                   </span>
-                  <span className="text-blue-600 dark:text-blue-400 font-semibold group-hover:underline">
+                  <span className="text-blue-600 dark:text-blue-400 font-semibold group-hover:underline text-xs md:text-sm">
                     קרא עוד →
                   </span>
                 </div>
