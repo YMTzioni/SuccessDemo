@@ -1,7 +1,16 @@
-import Image from 'next/image'
+'use client'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5
+    }
+  }, [])
+
   return (
     <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 dark:from-gray-900 dark:via-blue-900 dark:to-teal-900 text-white py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -36,16 +45,19 @@ export default function Hero() {
           </div>
           <div className="hidden md:block">
             <div className="relative">
-              <div className="absolute inset-0 bg-teal-400 rounded-3xl transform rotate-6 opacity-20"></div>
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl">
-                <img
-                  src="https://unsplash.com/photos/a-hand-reaching-out-towards-a-robot-hand-f_u6pLLjGuo&auto=format&fit=crop&w=800&q=80"
-                  alt="Success College - Technology"
-                  width={600}
-                  height={400}
+              <div className="absolute inset-0 bg-blue-200 dark:bg-blue-300 rounded-3xl transform rotate-6 opacity-30"></div>
+              <div className="relative bg-blue-50 dark:bg-blue-100 rounded-3xl p-8 shadow-2xl">
+                <video
+                  ref={videoRef}
+                  src="/videos/hero.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="rounded-2xl w-full h-auto"
-                  loading="eager"
-                />
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
