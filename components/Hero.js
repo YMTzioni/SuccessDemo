@@ -49,7 +49,7 @@ export default function Hero() {
               <div className="relative bg-blue-50 dark:bg-blue-100 rounded-3xl p-8 shadow-2xl">
                 <video
                   ref={videoRef}
-                  src="Video/hero.mp4"
+                  src="public/videos/hero.mp4"
                   autoPlay
                   loop
                   muted
