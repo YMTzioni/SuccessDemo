@@ -1,7 +1,21 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Footer() {
+  const [logoSrc, setLogoSrc] = useState('/images/logo-white.png')
+
+  useEffect(() => {
+    // Check if we're on GitHub Pages (with basePath)
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname
+      if (currentPath.startsWith('/SuccessDemo')) {
+        setLogoSrc('/SuccessDemo/images/logo-white.png')
+      }
+    }
+  }, [])
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-white mt-auto border-t border-gray-800">
       <div className="container mx-auto px-4 py-8 md:py-12">
@@ -9,13 +23,14 @@ export default function Footer() {
           <div className="text-center sm:text-right">
             <Link href="/" className="inline-block mb-3 md:mb-4">
               <Image
-                src="/images/logo-white.png"
+                src={logoSrc}
                 alt="Success College Logo"
                 width={80}
                 height={80}
                 sizes="80px"
                 className="rounded-lg"
                 loading="lazy"
+                key={logoSrc}
               />
             </Link>
             <p className="text-gray-400 text-xs md:text-sm">
