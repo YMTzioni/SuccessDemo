@@ -1,9 +1,20 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
   const videoRef = useRef(null)
+  const [videoSrc, setVideoSrc] = useState('/videos/hero.mp4')
+
+  useEffect(() => {
+    // Check if we're on GitHub Pages (with basePath)
+    if (typeof window !== 'undefined') {
+      const currentPath = window.location.pathname
+      if (currentPath.startsWith('/SuccessDemo')) {
+        setVideoSrc('/SuccessDemo/videos/hero.mp4')
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (videoRef.current) {
@@ -49,12 +60,13 @@ export default function Hero() {
               <div className="relative bg-blue-50 dark:bg-blue-100 rounded-3xl p-8 shadow-2xl">
                 <video
                   ref={videoRef}
-                  src="public/videos/hero.mp4"
+                  src={videoSrc}
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="rounded-2xl w-full h-auto"
+                  key={videoSrc}
                 >
                   Your browser does not support the video tag.
                 </video>
