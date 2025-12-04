@@ -110,7 +110,6 @@ export default function AboutPage() {
                   src={member.image}
                   alt={member.name}
                   className="w-32 h-32 rounded-full mx-auto mb-4"
-                  unoptimized
                 />
                 <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                   {member.name}
