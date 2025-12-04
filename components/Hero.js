@@ -39,7 +39,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-teal-400 rounded-3xl transform rotate-6 opacity-20"></div>
               <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  src="https://unsplash.com/photos/a-hand-reaching-out-towards-a-robot-hand-f_u6pLLjGuo&auto=format&fit=crop&w=800&q=80"
                   alt="Success College - Technology"
                   width={600}
                   height={400}
