@@ -1,5 +1,8 @@
 'use client'
 
+// Note: This page uses client-side features. For static export, 
+// you may need to handle form submission differently or use a service like Formspree
+
 import Layout from '@/components/Layout'
 import { useState } from 'react'
 
